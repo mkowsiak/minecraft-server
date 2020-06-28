@@ -40,10 +40,10 @@ So, you want to have your own, personal, `Minecraft` server. Server, where you c
             |                                              https://github.com/Tiiffi/mcrcon
             |
             |
-            |-- server.jar                               - This is the file you want do download
-            |                                              from official Minecraft server.
+            |-- server.jar                               - This file should be downloaded
+            |                                              from official Minecraft pages.
             |                                              In this project this file contains
-            |                                              locatio of the Minecraft server.
+            |                                              location of the Minecraft server.
             |
             |-- server.properties
             `-- stop_server.sh                           - This file is used for stopping the
