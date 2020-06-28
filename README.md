@@ -124,7 +124,7 @@ and then, put following line insde editor
 It will run the backup each day at `1am`. The script will stop the server, perform the backup, and start the server after backup process is finished. Basically the rules to define what to run and at what time follows
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mkowsiak/minecraft-server/master/img/crontab.png">
+  <img src="https://raw.githubusercontent.com/mkowsiak/minecraft-server/master/img/crontab.png" width="600">
 </p>
 
 If you want to fine tune your `crontab` settings, take a look here: [crontab.guru](https://crontab.guru)
