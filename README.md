@@ -34,12 +34,17 @@ So, you want to have your own, personal, `Minecraft` server. Server, where you c
         `-- server
             |-- eula.txt
             |-- mcrcon                                   - console based Minecraft rcon client
-            |                                              you can download it from this location
+            |                                              you can download it from this 
+            |                                              location
+            |
             |                                              https://github.com/Tiiffi/mcrcon
             |
+            |
             |-- server.jar                               - This is the file you want do download
-            |                                              from official Minecraft server. Here
-            |                                              it's just an empty file.
+            |                                              from official Minecraft server.
+            |                                              In this project this file contains
+            |                                              locatio of the Minecraft server.
+            |
             |-- server.properties
             `-- stop_server.sh                           - This file is used for stopping the
                                                            the server by the system service
