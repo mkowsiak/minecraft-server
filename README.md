@@ -3,7 +3,7 @@
 [![Download](https://img.shields.io/badge/download-click%20here-red.svg)](https://github.com/mkowsiak/minecraft-server/archive/master.zip)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mkowsiak/minecraft-server/master/img/minecraft.png">
+  <img src="https://raw.githubusercontent.com/mkowsiak/minecraft-server/master/img/minecraft.gif">
 </p>
 
 # I put a spell on you because you're mine
