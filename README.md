@@ -158,6 +158,48 @@ It will run the backup each day at `1am`. The script will stop the server, perfo
 
 If you want to fine tune your `crontab` settings, take a look here: [crontab.guru](https://crontab.guru)
 
+## Backing up to external USB drive
+
+It's a good idea to have another copy of your server (preferably on external drives). I, personally, decided to use USB sticks for that purpose. If you decide to do the same, make sure to do following
+
+## Add USB sticks to /etc/fstab
+
+First of all, create the space for your backup.
+
+```
+> sudo mkdir -p /media/minecraft-backup
+```
+
+Make sure to locate your USB drive.
+
+```
+> sudo fdisk -l
+...
+...
+Disk /dev/sdb: 114.6 GiB, 123060879360 bytes, 240353280 sectors
+Disk model:  SanDisk 3.2Gen1
+...
+...
+Device     Boot Start       End   Sectors   Size Id Type
+/dev/sdb1          32 240353279 240353248 114.6G  c W95 FAT32 (LBA)
+```
+
+Add the drive to `/etc/fstab`
+
+```
+/dev/sdb1 /media/minecraft-backup vfat dmask=000,fmask=111 0 0
+```
+
+Once you have everything in place, create simple script that will run the backup of your files
+
+```
+#!/bin/bash
+
+rsync --ignore-existing -rt /var/minecraft/backup/* /media/minecraft-backup
+```
+
+and add it to your `crontab` (see above how to do this). Once everything is in place, you are safe with your backups.
+
 # To sum up what you have read so far
 
 After following this tutorial you should have:
