@@ -86,6 +86,7 @@ You need two things: `OpenJDK` and tools for compiling stuff using `gcc`.
 > sudo apt-get install openjdk-11-jdk
 > sudo apt-get install build-essential
 > sudo apt-get install git
+> sudo apt-get install rsync
 > sudo groupadd -r minecraft
 > sudo useradd -r -g minecraft -d "/var/minecraft" -s "/bin/bash" minecraft
 ```
