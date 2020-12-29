@@ -57,6 +57,27 @@ So, you want to have your own, personal, `Minecraft` server. Server, where you c
 
 First of all, you need operating system on your target machine. You have plenty of choices, but here, I assume that you are going to use `Debian 10`. You can get it from: [Debian](https://www.debian.org/distrib). Once it is in place and you can start up your host machine, you have to do small preparations.
 
+## Configure Debian repositories
+
+Make sure to add
+
+```
+deb http://deb.debian.org/debian buster main
+deb-src http://deb.debian.org/debian buster main
+
+deb http://deb.debian.org/debian-security/ buster/updates main
+deb-src http://deb.debian.org/debian-security/ buster/updates main
+
+deb http://deb.debian.org/debian buster-updates main
+deb-src http://deb.debian.org/debian buster-updates main
+```
+
+to your `apt` repositories list: `/etc/apt/sources.list`. Once locations are in place, make sure to run
+
+```
+> sudo apt update
+```
+
 ## Install packages that will be required by server.
 
 You need two things: `OpenJDK` and tools for compiling stuff using `gcc`.
