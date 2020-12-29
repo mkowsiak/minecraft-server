@@ -106,6 +106,7 @@ At this stage, copy everything from `var/minecraft` into `/var/minecraft/` on yo
 > git clone https://github.com/Tiiffi/mcrcon.git
 > cd mcrcon
 > make
+> sudo mkdir -p /var/minecraft/server
 > sudo cp mcrcon /var/minecraft/server
 > sudo chown minecraft.minecraft /var/minecraft/server/mcrcon
 ```
