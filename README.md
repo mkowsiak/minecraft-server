@@ -85,6 +85,7 @@ You need two things: `OpenJDK` and tools for compiling stuff using `gcc`.
 ```
 > sudo apt-get install openjdk-11-jdk
 > sudo apt-get install build-essential
+> sudo apt-get install git
 > sudo groupadd -r minecraft
 > sudo useradd -r -g minecraft -d "/var/minecraft" -s "/bin/bash" minecraft
 ```
@@ -100,7 +101,7 @@ At this stage, copy everything from `var/minecraft` into `/var/minecraft/` on yo
 `mcrcon` allows you to send commands to your `Minecraft` server. It's a `rcon` client specially crafted for `Minecraft`. To get it running you have to download it, compile it and put it in proper place.
 
 ```
-> mkdir /tmp
+> mkdir -p /tmp
 > cd /tmp
 > git clone https://github.com/Tiiffi/mcrcon.git
 > cd mcrcon
