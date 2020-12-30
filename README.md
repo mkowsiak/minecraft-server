@@ -30,7 +30,9 @@ So, you want to have your own, personal, `Minecraft` server. Server, where you c
 `-- var                                                  
     `-- minecraft                                        - your Minecraft server
         |-- backup
+        |   |-- rsync-backup.sh
         |   `-- script.sh
+        |
         `-- server
             |-- eula.txt
             |-- mcrcon                                   - console based Minecraft rcon client
@@ -148,6 +150,10 @@ and then, put following line insde editor
 
 ```
 0 1 * * * /var/minecraft/backup/script.sh
+
+# You can set different time for syncing, but you can
+# also combine everything inside script.sh
+30 1 * * * /var/minecraft/backup/rsync-backup.sh
 ```
 
 It will run the backup each day at `1am`. The script will stop the server, perform the backup, and start the server after backup process is finished. Basically the rules to define what to run and at what time follows
@@ -190,7 +196,7 @@ Add the drive to `/etc/fstab`
 /dev/sdb1 /media/minecraft-backup vfat dmask=000,fmask=111 0 0
 ```
 
-Once you have everything in place, create simple script that will run the backup of your files
+Once you have everything in place, create simple script that will run the backup of your files (you can find this script in the repository as well).
 
 ```
 #!/bin/bash
